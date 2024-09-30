@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Calculator de bacșiș</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cât las bacșiș?</h1>
+
+    <label for="amount">Nota de plată:</label>
+    <input type="number" id="amount" placeholder="...">
+
+    <label for="tipPercentage">Cât las bacșiș:</label>
+    <input type="radio" name="tipMethod" value="default" checked> Procent prestabilit
+    <select id="tipPercentage">
+        <option value="0.10">10%</option>
+        <option value="0.15">15%</option>
+        <option value="0.20">20%</option>
+    </select>
+
+    <input type="radio" name="tipMethod" value="custom1"> Procent personalizat
+    <input type="number" id="customPercent" placeholder="...">
+
+    <input type="radio" name="tipMethod" value="custom2"> Sumă personalizată
+    <input type="number" id="customAmount" placeholder="...">
+
+    <button onclick="calculateTip()">Calculează</button>
+
+    <div class="result" id="result"></div>
+</body>
+</html>
