@@ -1,3 +1,5 @@
+let participantCount = 2;
+
 function calculateTip() {
     const amount = parseFloat(document.getElementById('amount').value);
     
@@ -52,4 +54,37 @@ function resetAll() {
     document.getElementById('customPercent').value = '';
     document.getElementById('customAmount').value = '';
     document.getElementById('result').innerHTML = '';
+}
+
+
+
+
+
+function addParticipant() {
+    participantCount++;
+    const div = document.createElement('div');
+    div.id = 'participant' + participantCount;
+    div.innerHTML = `
+        <button onclick="removeParticipant(${participantCount})">-</button>
+        <input type="text" class="additional" placeholder="Person ${participantCount}">
+    `;
+    document.getElementById('additionalParticipants').appendChild(div);
+}
+
+function removeParticipant(id) {
+    const participantDiv = document.getElementById('participant' + id);
+    participantDiv.remove();
+}
+
+
+function choosePerson() {
+const inputs = document.querySelectorAll('.cineplateste input[type="text"]');
+const names = Array.from(inputs).map(input => input.value).filter(name => name.trim() !== '');
+if (names.length > 0) {
+    const randomIndex = Math.floor(Math.random() * names.length);
+    const chosenName = names[randomIndex];
+    document.getElementById('personResult').innerText = `Persoana aleasă: ${chosenName}`;
+} else {
+    document.getElementById('personResult').innerText = 'Introduceți numele  persoanelor';
+}
 }
