@@ -29,7 +29,7 @@ input, select, button.submit {
     font-size: 16px;
 }
 
-input[type="number"] {
+input[type="number"], input[type="text"] {
     width: 94%;
 }
 input[type="radio"] {
@@ -40,6 +40,20 @@ input[type="radio"] {
     font-weight: bold;
 }
 
-button.reset {
+button.option {
     margin-left: 10px;
+}
+
+#additionalParticipants {
+    width: 100%;
+}
+
+#additionalParticipants input[type="text"] {
+    width: 84.5%;
+}
+#additionalParticipants button {
+    width: 2rem;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
 }
