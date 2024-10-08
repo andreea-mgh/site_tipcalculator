@@ -1,7 +1,12 @@
+html {
+    height: 100%;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-image: url('img/dan-gold-E6HjQaB7UEA-unsplash.jpg');
-    background-size: auto 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
 }
