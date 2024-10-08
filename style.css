@@ -1,10 +1,16 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 50px;
+    background-image: url('img/dan-gold-E6HjQaB7UEA-unsplash.jpg');
+    background-size: auto 100vh;
+    display: flex;
+    justify-content: center;
 }
 .container {
     max-width: 400px;
-    margin: 0 auto;
+    background-color: #d1b8b8;
+    color: rgb(60, 62, 66);
+    padding: 3rem;
+    border-radius: 1rem;
 }
 label {
     display: block;
@@ -18,6 +24,9 @@ input, select, button.submit {
     font-size: 16px;
 }
 
+input[type="number"] {
+    width: 94%;
+}
 input[type="radio"] {
     width: auto;
 }
