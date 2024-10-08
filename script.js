@@ -16,6 +16,7 @@ function calculateTip() {
         Bacșiș: ${tip.toFixed(2)} RON <br>
         Total: ${total.toFixed(2)} RON
         `;
+        
     }
     else if ( document.querySelector('input[name="tipMethod"]:checked').value == "custom1" ) {
         const tip = amount * parseFloat(document.getElementById('customPercent').value) / 100;
@@ -30,6 +31,7 @@ function calculateTip() {
         Bacșiș: ${tip.toFixed(2)} RON <br>
         Total: ${total.toFixed(2)} RON
         `;
+        
     }
     else if ( document.querySelector('input[name="tipMethod"]:checked').value == "custom2" ) {
         const tip = parseFloat(document.getElementById('customAmount').value);
@@ -45,7 +47,10 @@ function calculateTip() {
         Bacșiș: ${tip.toFixed(2)} RON (${tipPercentage.toFixed(2)}%) <br>
         Total: ${total.toFixed(2)} RON
         `;
+
     }
+
+    document.querySelector('.cineplateste').style.display = 'block';
 }
 
 function resetAll() {
@@ -54,6 +59,7 @@ function resetAll() {
     document.getElementById('customPercent').value = '';
     document.getElementById('customAmount').value = '';
     document.getElementById('result').innerHTML = '';
+    document.querySelector('.cineplateste').style.display = 'none';
 }
 
 
