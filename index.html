@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Cât las bacșiș?</h1>
+    <h1>Cât las bacșiș?<button class="reset" onclick="resetAll()">Resetează</button></h1>
 
     <label for="amount">Nota de plată:</label>
     <input type="number" id="amount" placeholder="...">
@@ -26,7 +26,7 @@
     <input type="radio" name="tipMethod" value="custom2"> Sumă personalizată
     <input type="number" id="customAmount" placeholder="...">
 
-    <button onclick="calculateTip()">Calculează</button>
+    <button class="submit" onclick="calculateTip()">Calculează</button>
 
     <div class="result" id="result"></div>
 

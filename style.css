@@ -11,17 +11,21 @@ label {
     margin-bottom: 10px;
     font-weight: bold;
 }
-input, select, button {
+input, select, button.submit {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     font-size: 16px;
 }
-/* radio input */
+
 input[type="radio"] {
     width: auto;
 }
 .result {
     font-size: 18px;
     font-weight: bold;
+}
+
+button.reset {
+    margin-left: 10px;
 }

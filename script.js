@@ -1,7 +1,7 @@
 function calculateTip() {
     const amount = parseFloat(document.getElementById('amount').value);
     
-    if( isNaN(amount) ) {
+    if( isNaN(amount) || amount <= 0 ) {
         document.getElementById('result').innerHTML = `Introduceți o valoare validă la nota de plată.`;
         return;
     }
@@ -44,4 +44,12 @@ function calculateTip() {
         Total: ${total.toFixed(2)} RON
         `;
     }
+}
+
+function resetAll() {
+    document.getElementById('amount').value = '';
+    document.getElementById('tipPercentage').value = '0';
+    document.getElementById('customPercent').value = '';
+    document.getElementById('customAmount').value = '';
+    document.getElementById('result').innerHTML = '';
 }
